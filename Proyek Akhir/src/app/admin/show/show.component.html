@@ -1,0 +1,51 @@
+<div mat-dialog-content>
+    <mat-list>
+        <h1 matSubheader><b>Detail Pesanan</b></h1>
+        <mat-list-item>
+            <mat-icon matListIcon>person</mat-icon>
+            <p matLine>JENIS GAME</p>
+            <h3 mat-line>{{data.game}}</h3>
+            <mat-divider></mat-divider>
+        </mat-list-item>
+
+        <mat-list-item>
+            <mat-icon matListIcon>person</mat-icon>
+            <p matLine>ID GAME</p>
+            <h3 mat-line>{{data.name}}</h3>
+            <mat-divider></mat-divider>
+        </mat-list-item>
+
+        <mat-list-item>
+            <mat-icon matListIcon>local_hotel</mat-icon>
+            <p matLine>SERVER GAME</p>
+            <h3 mat-line>{{data.address}}</h3>
+            <mat-divider></mat-divider>
+        </mat-list-item>
+
+        <mat-list-item>
+            <mat-icon matListIcon>home</mat-icon>
+            <p matLine>HARGA</p>
+            <h3 mat-line>{{data.city}}</h3>
+            <mat-divider></mat-divider>
+        </mat-list-item>
+
+        <mat-list-item>
+            <mat-icon matListIcon>location_city</mat-icon>
+            <p matLine>JUMLAH</p>
+            <h3 mat-line>{{data.province}}</h3>
+            <mat-divider></mat-divider>
+        </mat-list-item>
+
+        <mat-list-item>
+            <mat-icon matListIcon>alternate_email</mat-icon>
+            <p matLine>EMAIL</p>
+            <h3 mat-line>{{data.email}}</h3>
+            <mat-divider></mat-divider>
+        </mat-list-item>
+
+    </mat-list>
+</div>
+<mat-dialog-actions>
+    <span class="spacer"></span>
+    <button mat-button mat-dialog-close style="background-color: darkslateblue;">Tutup</button>
+</mat-dialog-actions>

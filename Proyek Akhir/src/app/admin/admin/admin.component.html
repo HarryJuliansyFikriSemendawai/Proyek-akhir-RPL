@@ -1,0 +1,67 @@
+<ng-container>
+  <!--toolbar-->
+  <mat-toolbar color="primary" style="background-color: brown;" class="example-header">
+      <button mat-icon-button (click)="sidenav.toggle()">
+          <mat-icon>menu</mat-icon>
+      </button>
+      <span>My Game Shop</span>
+      <div class="uk-width-expand"></div>
+      <mat-menu #appMenu="matMenu">
+        <button mat-menu-item (click)='logout()'><mat-icon>account_circle</mat-icon>Log Out</button>
+      </mat-menu>
+      
+      <button mat-button [matMenuTriggerFor]="appMenu"><mat-icon>settings</mat-icon></button>
+  </mat-toolbar>
+  <!--end toolbar-->
+
+  <mat-sidenav-container class="example-container">
+  
+    <mat-sidenav style="background-color: cadetblue;" #sidenav mode="side" [position]="'start'" opened class="sidenav-left"
+    [fixedInViewport]="true" [fixedTopGap]="60"
+    [fixedBottomGap]="0">
+  
+    <mat-nav-list>
+      <mat-list-item routerLink="/admin/dashboard">
+          <mat-icon matListIcon>dashboard</mat-icon>
+          <h3 matLine>Dashboard</h3>
+      </mat-list-item>
+    </mat-nav-list>
+    <mat-nav-list>
+      <mat-list-item routerLink="/admin/product">
+          <mat-icon matListIcon>table_view</mat-icon>
+          <h3 matLine>Product</h3>
+      </mat-list-item>
+      <mat-list-item routerLink="/admin/profile">
+        <mat-icon matListIcon>shopping_cart</mat-icon>
+        <h3 matLine>Keranjang</h3>
+    </mat-list-item>
+    <mat-list-item routerLink="/admin/about">
+      <mat-icon matListIcon>info</mat-icon>
+      <h3 matLine>Tentang</h3>
+  </mat-list-item>
+    </mat-nav-list> 
+
+    </mat-sidenav>
+  
+  <mat-sidenav #sidenav mode="side" [position]="'end'"  class="example-container"
+  [fixedInViewport]="true" [fixedTopGap]="60" 
+  [fixedBottomGap]="0">
+  
+     
+  
+  </mat-sidenav>
+  <!--sidenav content-->
+  <mat-sidenav-content style="padding: 20px; background-color: bisque;">
+  <!--halaman-halaman tampil disini-->
+  
+ 
+<router-outlet></router-outlet>
+  
+  
+  
+  </mat-sidenav-content>
+  <!--end sidenav content-->
+  </mat-sidenav-container>   
+  </ng-container>
+
+  

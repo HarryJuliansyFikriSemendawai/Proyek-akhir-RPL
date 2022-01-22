@@ -1,0 +1,21 @@
+<mat-form-field appearance="fill">
+    <mat-label>Pilih Pembayaran</mat-label>
+    <mat-select [(value)]="selected">
+      <mat-option>Pilih</mat-option>
+      <mat-option value="option1">E-Wallet</mat-option>
+      <mat-option value="option2">ATM</mat-option>
+      <mat-option value="option3">Alfamart</mat-option>
+      <mat-option value="option4">Indomaret</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <div>
+      <div>No Tujuan E-Wallet        = 081234567890</div>
+      <div>No Rekening Atm           = BNI a/n 12345678</div>
+      <div>Kode Pembayaran Alfamart  = 0987654321</div>
+      <div>Kode Pembayaran Indomaret = 1234567890</div>
+  </div>
+  <div mat-dialog-actions align="right">
+    <button mat-button mat-dialog-close style="margin-right: 5px;">Cancel</button>
+    <button mat-button mat-dialog-close style="background-color: darkslateblue;">Oke</button>
+</div>
