@@ -1,0 +1,18 @@
+{
+  "targets": {
+    "katalog-buku-8f612": {
+      "hosting": {
+        "my-App": [
+          "katalog-buku-8f612"
+        ]
+      }
+    },
+    "database-rpl-3643d": {
+      "hosting": {
+        "my-App": [
+          "database-rpl-3643d"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+<h3 mat-dialog-title>
+    Detail Produk
+</h3>
+<div mat-dialog-content>
+    <mat-form-field appearance="outline" style="width: 100%;">
+        <mat-label>Jenis Game</mat-label>
+        <input matInput [(ngModel)]="data.game" PUBG>
+    </mat-form-field>
+    <mat-form-field appearance="outline" style="width: 100%;">
+        <mat-label>ID GAME</mat-label>
+        <input matInput [(ngModel)]="data.name">
+    </mat-form-field>
+    <mat-form-field appearance="outline" style="width: 100%;">
+        <mat-label>ID SERVER</mat-label>
+        <input matInput [(ngModel)]="data.address">
+    </mat-form-field>
+    <mat-form-field appearance="outline" style="width: 100%;">
+        <mat-label>HARGA</mat-label>
+        <input matInput [(ngModel)]="data.city">
+    </mat-form-field>
+    <mat-form-field appearance="outline" style="width: 100%;">
+        <mat-label>JUMLAH</mat-label>
+        <input matInput [(ngModel)]="data.province">
+    </mat-form-field>
+    <mat-form-field appearance="outline" style="width: 100%;">
+        <mat-label>EMAIL</mat-label>
+        <input matInput [(ngModel)]="data.email">
+    </mat-form-field>
+</div>
+<div mat-dialog-actions align="end">
+<button mat-button mat-dialog-close>Batal</button>
+<button mat-flat-button (click)="saveData()" [disabled]="loading" style="background-color: darkslateblue;">{{loading ? 'Menyimpan..':'Simpan'}}</button>
+</div>

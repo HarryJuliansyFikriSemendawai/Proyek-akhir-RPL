@@ -1,0 +1,21 @@
+<div class="uk-flex uk-flex-middle uk-flex-center uk-height-viewport uk-animation-toggle uk-animation-fade" style="background-image: url('assets/wp.jpg'); background-size: cover; background-position: center;">  
+    <mat-card class="uk-width-1-3@m">
+        <div class="uk-flex uk-flex-center uk-margin-medium-bottom">
+            <h3>Lupa Password</h3>
+        </div>
+      <mat-card-content>
+        <mat-form-field class="uk-width-1-1">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Ex. email@domain.com" [(ngModel)]="user.email" required>
+          </mat-form-field>
+          <div class="uk-flex uk-flex-right">
+            <div class="uk-width-expand">
+              <button mat-button routerLink="/register">BUAT AKUN</button>
+              <button mat-button routerLink="/login">SUDAH ADA AKUN</button>
+          </div>
+          <button mat-raised-button color="primary" style="background-color: darkslateblue;" (click)="forgot(user)" [disabled]="loading">{{loading ? 'Sending..':'KIRIM'}}</button>
+      </div>
+      <p class="uk-flex uk-flex-center uk-margin-small-top uk-margin-small-bottom">Setelah mengirimkan konfirmasi pengaturan ulang kata sandi, Anda akan mendapatkan pesan pemberitahuan di email tujuan untuk mengubah kata sandi yang diinginkan.</p>
+  </mat-card-content>
+</mat-card>
+</div>

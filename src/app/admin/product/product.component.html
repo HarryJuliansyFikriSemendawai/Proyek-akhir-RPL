@@ -1,0 +1,38 @@
+<div *ngIf="loading" style="height: 300px" class="uk-flex uk-flex-center uk-flex-middle">
+    <mat-spinner></mat-spinner>
+</div>
+<mat-card *ngIf="!loading">
+    <mat-card-header>
+        <mat-card-title>TOP UP</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+
+        <mat-grid-list cols="2" rowHeight="2:1">
+            <mat-grid-tile>
+                <!-- Product image PUBG-->
+                <button (click)="pubg({},-1)"><img class="card-img-top" src="assets/02.png"  /></button>
+            </mat-grid-tile>
+
+            <mat-grid-tile>
+                <!-- Product image MOBILE LEGEND-->
+                <button (click)="ml({},-1)"><img class="card-img-top" src="assets/01.png" alt="..." /></button> 
+            </mat-grid-tile>
+
+            <mat-grid-tile>
+                <!-- Product image FREE FIRE-->
+                <button (click)="ff({},-1)"><img class="card-img-top" src="assets/03.png"  alt="..." /></button>
+            </mat-grid-tile>
+
+            <mat-grid-tile>
+                <!-- Product image CODM-->
+                <button (click)="cod({},-1)"><img class="card-img-top" src="assets/04.jpg"  alt="..." /></button>
+            </mat-grid-tile>
+          </mat-grid-list>
+     
+        <div class="uk-flex">
+            
+            <span class="uk-width uk-width-middle uk-width-expand"></span>
+            
+        </div>
+    </mat-card-content>
+</mat-card>
